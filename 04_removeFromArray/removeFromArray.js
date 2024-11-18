@@ -1,7 +1,7 @@
-const removeFromArray = function(arr,num) {
-    let numLocation  = arr.indexOf(num);
-    let remElement = arr.splice(numLocation,1);
-    console.log(arr);
+const removeFromArray = function(arr, ...args) {
+    for(let i = 0; i < args.length; i++){
+        arr.splice(arr.indexOf(args[i]),1);
+    }
     return arr;
 };
 
